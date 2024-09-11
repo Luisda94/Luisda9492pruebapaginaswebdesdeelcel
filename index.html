@@ -1,15 +1,184 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Cursos de Alura</title>
-    </head>
-    <body>
-        <ul>
-            <li>Vagrant</li>
-            <li>Docker</li>
-            <li>Ansible</li>
-            <li>Integración Continua: cosas </li>
-        </ul>
-    </body>
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Proyectos - Luis Diaz</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="combined-styles.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ksm4D8b2vNb/Z8sN2BfHezHs61pKppr/8D/R3F8pk70rJ8Pzo/er+1zm3XyF5hZe" crossorigin="anonymous"></script>
+    <script src="Script/Script.js" defer></script>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Luis Diaz</span> - Soporte Técnico/Programador</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#about">Acerca de mí</a></li>
+                    <li><a href="#certifications">Certificaciones</a></li>
+                    <li><a href="#experience">Experiencia</a></li>
+                    <li><a href="#education">Educación</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de presentación -->
+    <section id="showcase">
+        <div class="container">
+            <h1>Bienvenido a mi página personal</h1>
+            <p>Soporte técnico y programador con experiencia en desarrollo web y administración de redes.</p>
+        </div>
+    </section>
+
+    <!-- Sección Acerca de mí -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Acerca de mí</h2>
+            <p>
+                Poseo capacidad analítica, afable, actitud positiva, diligente, responsable, perseverante, habilidad para trabajar bajo presión, también cuento con experiencia de trabajo en equipo enfocado en encontrar soluciones a cada dificultad que se presente, Orientado a lograr de forma proactiva el cumplimiento de las metas impuesta en el área a desempeñar.
+            </p>
+            <p>
+                Conocimiento en lenguajes de marcado, programación y de análisis de datos tales como, HTML5, CSS3, JavaScript, Java, Python, SQL, así como conocimientos en estadísticas, en la interfaz de Oracle y el uso intensivo sobre la administración de redes (locales y en la nube) para el desarrollo de software.
+            </p>
+        </div>
+    </section>
+
+    <!-- Sección Certificaciones -->
+    <section id="certifications" class="section dark">
+        <div class="container">
+            <h2>Certificaciones</h2>
+            <ul>
+                <li><a href="Programa AluraBackEnd.pdf" target="_blank" onclick="return confirmAction();">BackEnd Java</a></li>
+                <li><a href="">E-Camp</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sección Experiencia -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Experiencia</h2>
+            <ul>
+                <li>
+                    <h3>Workana - Desarrollador web, Programador Freelance (2024 - Actualmente)</h3>
+                    <p>Trabajos independientes como desarrollador web para uso particular o pyme, usando las librerías de JS, las últimas actualizaciones de CSS y HTML5, así como asesorando sobre el mejor dominio y hosting donde colocar la web según las necesidades de las pymes y las personas.</p>
+                </li>
+                <li>
+                    <h3>Person to person - Soporte técnico/Atención al cliente (2014 - 2019)</h3>
+                    <p>Encargado de resolver fallas con el servicio de internet de Cantv por vía telefónica, tales como pérdida de la conexión de internet, lentitud en la navegación, ayuda en el registro al usuario del servicio ABA.</p>
+                </li>
+                <li>
+                    <h3>Cyber Café Dimar - Encargado de administración (2013 - 2014)</h3>
+                    <p>Trabajado con redes locales, encargado de la administración del personal, y gestión con aplicativo desktop para el uso de las horas de uso de equipos del mismo.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sección Educación -->
+    <section id="education" class="section dark">
+        <div class="container">
+            <h2>Educación</h2>
+            <ul>
+                <li>
+                    <h3>Instituto Profesional Alura (2023 - Actualmente)</h3>
+                    <p>Estudiante de programación BackEnd.</p>
+                </li>
+                <li>
+                    <h3>Universidad Central de Venezuela (2017 - Congelado 2019)</h3>
+                    <p>Licenciatura en Historia.</p>
+                </li>
+                <li>
+                    <h3>U.E.P Jose Maria Carreño (2008 - 2014)</h3>
+                    <p>Bachiller Mención Ciencias.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="container mt-4">
+        <h2>Mis Proyectos</h2>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#Barbería_Alura">Práctica de Barbería</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#History_of_Web">History of Web</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#DaVince">Práctica Da Vinci</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Pizarra">Pizarra Web</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="mt-4">
+            <h2 id="Barbería_Alura">Barbería Ficticia Alura</h2>
+            <img src="Alura.png" alt="Barbería Ficticia Alura" style="width: 80%; max-width: 300px; height: auto;">
+            <p>Una web donde aplico mis primeros conocimientos integrados en HTML5, CSS y JavaScript.<br>Aquí di mis primeros pasos en responsive design.</p>
+            <a href="AluraPruebaWeb/index.html" class="btn btn-primary">Ver Proyecto</a>
+        </section>
+        <section class="mt-4">
+            <h2 id="History_of_Web">History of Web</h2>
+            <img src="HistoryWeb.jpg" alt="Historia de la web" style="width: 80%; max-width: 200px; height: auto;">
+            <p>Página que usé para practicar los enlaces internos y externos de la web en KhanAcademy.</p>
+            <a href="KhanAcademy/Resumen de la historia de la web.html" class="btn btn-primary">Ver Proyecto</a>
+        </section>
+        <section class="mt-4">
+            <h2 id="DaVince">Práctica Da Vinci</h2>
+            <img src="DaVince.jpg" alt="Página ultra resumida de Leonardo Da Vinci" style="width: 80%; max-width: 400px; height: auto;">
+            <p>Página práctica de referencias en E-camp.</p>
+            <a href="Seccion_1_evaluacion.html" class="btn btn-primary">Ver Proyecto</a>
+        </section>
+        <section>
+            <h2 id="Pizarra">Pizarra</h2>
+            <p>Una página web para dibujar usando la API Canvas de JavaScript.</p>
+            <a href="Pizarra_Web/pizarra_web.html" class="btn btn-primary">Ver Proyecto</a>
+        </section>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact" class="section dark">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form id="contact-form" action="send_email.php" method="post">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Luis Diaz. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
 </html>
