@@ -8,8 +8,12 @@ body, h1, h2, h3, p, ul {
 /* Estilo general del cuerpo de la página */
 body {
     font-family: 'Arial', sans-serif; /* Usa Arial como fuente principal; si no está disponible, usa cualquier fuente sans-serif */
-    background-color: #c74a4a; /* Color de fondo gris claro para toda la página, neutro y suave */
     line-height: 1.6; /* Aumenta el espacio entre líneas para mejorar la legibilidad */
+    background: url('imagenf.png') repeat;
+}
+ 
+.prueba a{
+    color:#96eaff
 }
 
 /* Contenedor principal que mantiene el contenido centrado */
@@ -69,7 +73,7 @@ header a:hover {
 /* Estilos para la sección de presentación */
 #showcase {
     min-height: 400px; /* Altura mínima de 400px para la sección de presentación */
-    background: url('imagenf.png') no-repeat center center; /* Usa una imagen de fondo, sin repetición y centrada */
+    background: url('imagenf.png') no-repeat center; /* Usa una imagen de fondo, sin repetición y centrada */
     background-size: cover; /* Escala la imagen de fondo para cubrir toda la sección */
     text-align: center; /* Centra el texto horizontalmente */
     color: #ecf0f1; /* Color del texto blanco grisáceo */
@@ -89,16 +93,10 @@ header a:hover {
 .section {
     padding: 20px; /* Añade relleno alrededor del contenido de cada sección */
     margin: 20px 0; /* Añade margen vertical entre secciones */
-    background: #d5dbfc; /* Color de fondo blanco para las secciones */
-    color: #2c3e50; /* Color del texto oscuro para contraste */
+    background: #10161d; /* Color de fondo blanco para las secciones */
+    color: #96eaff; /* Color del texto oscuro para contraste */
 }
 
-.sectionDos {
-    background: #151d25;
-    color: #f5faff; /* Color de fondo oscuro azul-grisáceo para las secciones con clase .dark */
-/* Resetea los estilos por defecto del navegador */
-
-}
 /* Menú de navegación */
 nav ul {
     background-color: #34495e;
@@ -183,10 +181,62 @@ footer {
     color: #ecf0f1;
 }
 
+
 .light-theme {
     background-color: #f4f4f4;
     color: #2c3e50;
 }
+body.light-theme {
+    position: relative; /* Necesario para que ::before funcione */
+    background-image: url('imagenf.png');
+   
+    background-repeat: repeat;
+    background-position: center;
+    z-index: 0;
+}
+
+body.light-theme::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit; /* Usa la misma imagen */
+    background-size: inherit;
+    background-repeat: inherit;
+    background-position: inherit;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    z-index: -1; /* Envía la imagen al fondo */
+    pointer-events: none; /* Evita que interfiera con interacciones */
+}
+
+.light-theme::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imagenf.png');
+    background-size: cover; /* Ajusta según tus necesidades */
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    z-index: -1; /* Envía la imagen al fondo */
+    pointer-events: none; /* Evita que interfiera con interacciones */
+}
+
+.light-theme #showcase{
+
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    z-index: -1; /* Envía la imagen al fondo */
+    pointer-events: none;
+}
+
 
 .dark-theme header, .light-theme header {
     background: #111e2b;
@@ -199,11 +249,13 @@ footer {
 }
 
 .dark-theme nav ul, .light-theme nav ul {
-    background-color: #c8cbda;
-    color: #01182e;
+    background-color: #70727e;
+    color: #000000;
 }
 
-.dark-theme .section, .light-theme .section {
+
+
+.light-theme .section {
     background: #ecf0f1b6;
     color: #2c3e50;
 }
@@ -216,4 +268,13 @@ footer {
 .light-theme a:hover, .dark-theme a:hover {
     color: #000000;
     text-decoration: underline;
+}
+.dark{
+    background: #2c3e50;
+    color: #96eaff;
+}
+.light-theme .dark{
+    background: #b6cae6;
+    color: #10161d; /* Color de fondo oscuro azul-grisáceo para las secciones con clase .dark */
+/* Resetea los estilos por defecto del navegador */
 }
